@@ -1,0 +1,12 @@
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\bin\Debug\MyBTL.dll.config
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\bin\Debug\MyBTL.dll
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\bin\Debug\MyBTL.pdb
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\bin\Debug\EntityFramework.dll
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\bin\Debug\EntityFramework.xml
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\obj\Debug\MyBTL.csproj.AssemblyReference.cache
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\obj\Debug\MyBTL.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\obj\Debug\MyBTL.csproj.CopyComplete
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\obj\Debug\MyBTL.dll
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\MyBTL\obj\Debug\MyBTL.pdb

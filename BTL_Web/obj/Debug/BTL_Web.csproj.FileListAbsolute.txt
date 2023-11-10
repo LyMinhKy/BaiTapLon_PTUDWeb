@@ -77,3 +77,10 @@ C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\BTL_Web\obj\Debug\BTL_Web
 C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\BTL_Web\obj\Debug\BTL_Web.csproj.CopyComplete
 C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\BTL_Web\obj\Debug\BTL_Web.dll
 C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\BTL_Web\obj\Debug\BTL_Web.pdb
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\BTL_Web\bin\EntityFramework.dll
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\BTL_Web\bin\EntityFramework.SqlServer.dll
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\BTL_Web\bin\MyBTL.dll
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\BTL_Web\bin\MyBTL.pdb
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\BTL_Web\bin\MyBTL.dll.config
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\BTL_Web\bin\EntityFramework.xml
+C:\Users\LAPTOP\Phát triển ứng dụng Web\BTL_Web\BTL_Web\bin\EntityFramework.SqlServer.xml
