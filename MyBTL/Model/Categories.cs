@@ -22,7 +22,7 @@ namespace MyBTL.Model
         [Display(Name = "Tên rút gọn")]
         public string Slug { get; set; }
 
-        [Display(Name = "Cấp cha")]
+        [Display(Name = "Hãng")]
         public int? ParentId { get; set; }
 
         [Display(Name = "Sắp xếp")]

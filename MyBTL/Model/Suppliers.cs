@@ -20,7 +20,7 @@ namespace MyBTL.Model
         public string Name { get; set; }
 
         [Display(Name = "Logo NCC")]
-        public string Img { get; set; }
+        public string Image { get; set; }
 
         [Display(Name = "Tên rút gọn")]
         public string Slug { get; set; }
