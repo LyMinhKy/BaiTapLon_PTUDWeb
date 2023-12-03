@@ -262,6 +262,10 @@
     <Content Include="Public\img\gallery\r5.jpg" />
     <Content Include="Public\img\gallery\r7.jpg" />
     <Content Include="Public\img\gallery\r8.jpg" />
+    <Content Include="Public\img\home\balo.jpg" />
+    <Content Include="Public\img\home\banner ttg.jpg" />
+    <Content Include="Public\img\home\build pc.jpg" />
+    <Content Include="Public\img\home\gaming gear.jpg" />
     <Content Include="Public\img\home\hero-banner.png" />
     <Content Include="Public\img\home\hero-slide1.png" />
     <Content Include="Public\img\home\hero-slide2.png" />
@@ -283,7 +287,23 @@
     <Content Include="Public\img\instagram\ins-6.jpg" />
     <Content Include="Public\img\login.jpg" />
     <Content Include="Public\img\logo.png" />
+    <Content Include="Public\img\product\banphim.jpg" />
     <Content Include="Public\img\product\card.jpg" />
+    <Content Include="Public\img\product\card1.jpg" />
+    <Content Include="Public\img\product\card2.jpg" />
+    <Content Include="Public\img\product\core i3 12100 lga 1700.jpg" />
+    <Content Include="Public\img\product\headphone.jpg" />
+    <Content Include="Public\img\product\keyboard.jpg" />
+    <Content Include="Public\img\product\loa.jpg" />
+    <Content Include="Public\img\product\manhinh.jpg" />
+    <Content Include="Public\img\product\mh1.jpg" />
+    <Content Include="Public\img\product\mh2.jpg" />
+    <Content Include="Public\img\product\mouse.jpg" />
+    <Content Include="Public\img\product\pc1.jpg" />
+    <Content Include="Public\img\product\pc2.jpg" />
+    <Content Include="Public\img\product\pc3.jpg" />
+    <Content Include="Public\img\product\pc4.jpg" />
+    <Content Include="Public\img\product\pc5.jpg" />
     <Content Include="Public\img\product\product-sm-1.png" />
     <Content Include="Public\img\product\product-sm-2.png" />
     <Content Include="Public\img\product\product-sm-3.png" />
@@ -2661,10 +2681,12 @@
     <Content Include="Areas\Admin\Views\Menu\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Menu\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Menu\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Menu\Trash.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Public\img\home\gaming gear.webp" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

@@ -256,9 +256,13 @@ namespace BTL_Web.Areas.Admin.Controllers
             return View(menus);
         }
 
+        /////////////////////////////////////////////////////////////////////////
         // GET: Admin/Menu/Edit/5
         public ActionResult Edit(int? id)
         {
+            ViewBag.ParentList = new SelectList(menusDAO.getList("Index"), "Id", "Name");
+            ViewBag.OrderList = new SelectList(menusDAO.getList("Index"), "Order", "Name");
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -272,20 +276,114 @@ namespace BTL_Web.Areas.Admin.Controllers
         }
 
         // POST: Admin/Menu/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,TableID,TypeMenu,Position,Link,ParentID,Order,CreateAt,CreateBy,UpdateAt,UpdateBy,Status")] Menus menus)
+        public ActionResult Edit( Menus menus)
         {
             if (ModelState.IsValid)
             {
+                if (menus.ParentId == null)
+                {
+                    menus.ParentId = 0;
+                }
+                if (menus.Order == null)
+                {
+                    menus.Order = 1;
+                }
+                else
+                {
+                    menus.Order += 1;
+                }
+                //Xy ly cho muc UpdateAt
+                menus.UpdateAt = DateTime.Now;
+
+                //Xy ly cho muc UpdateBy
+                menus.UpdateBy = Convert.ToInt32(Session["UserID"]);
+
+                //Thong bao thanh cong
+                TempData["message"] = new XMessage("success", "Cập nhật thành công");
+
+                //Cap nhat du lieu
                 menusDAO.Update(menus);
                 return RedirectToAction("Index");
             }
+            ViewBag.ParentList = new SelectList(menusDAO.getList("Index"), "Id", "Name");
+            ViewBag.OrderList = new SelectList(menusDAO.getList("Index"), "Order", "Name");
             return View(menus);
         }
 
+        /////////////////////////////////////////////////////////////////////////////////////
+        // GET: Admin/Menu/DelTrash/5:Thay doi trang thai cua mau tin = 0
+        public ActionResult DelTrash(int? id)
+        {
+            //khi nhap nut thay doi Status cho mot mau tin
+            Menus menus = menusDAO.getRow(id);
+
+            //thay doi trang thai Status tu 1,2 thanh 0
+            menus.Status = 0;
+
+            //cap nhat gia tri cho UpdateAt/By
+            menus.UpdateBy = Convert.ToInt32(Session["UserID"]);
+            menus.UpdateAt = DateTime.Now;
+
+            //Goi ham Update trong MenusDAO
+            menusDAO.Update(menus);
+
+            //Thong bao thanh cong
+            TempData["message"] = new XMessage("success", "Xóa Menu thành công");
+
+            //khi cap nhat xong thi chuyen ve Index
+            return RedirectToAction("Index", "Menu");
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////////
+        // GET: Admin/Menu/Recover/5:Thay doi trang thai cua mau tin
+        public ActionResult Recover(int? id)
+        {
+            if (id == null)
+            {
+                //Thong bao that bai
+                TempData["message"] = new XMessage("danger", "Phục hồi menu thất bại");
+                //chuyen huong trang
+                return RedirectToAction("Index", "Page");
+            }
+
+            //khi nhap nut thay doi Status cho mot mau tin
+            Menus menus = menusDAO.getRow(id);
+            //kiem tra id cua menus co ton tai?
+            if (menus == null)
+            {
+                //Thong bao that bai
+                TempData["message"] = new XMessage("danger", "Phục hồi menu thất bại");
+
+                //chuyen huong trang
+                return RedirectToAction("Index");
+            }
+            //thay doi trang thai Status = 2
+            menus.Status = 2;
+
+            //cap nhat gia tri cho UpdateAt/By
+            menus.UpdateBy = Convert.ToInt32(Session["UserID"]);
+            menus.UpdateAt = DateTime.Now;
+
+            //Goi ham Update trong menusDAO
+            menusDAO.Update(menus);
+
+            //Thong bao thanh cong
+            TempData["message"] = new XMessage("success", "Phục hồi menu thành công");
+
+            //khi cap nhat xong thi chuyen ve Trash de phuc hoi tiep
+            return RedirectToAction("Trash");
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////////
+        // GET: Admin/Menus/Trash/5:Hien thi cac mau tin có gia tri la 0
+        public ActionResult Trash(int? id)
+        {
+            return View(menusDAO.getList("Trash"));
+        }
+
+        /////////////////////////////////////////////////////////////////////////
         // GET: Admin/Menu/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -307,8 +405,13 @@ namespace BTL_Web.Areas.Admin.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Menus menus = menusDAO.getRow(id);
+            //tim thay mau tin thi xoa, cap nhat cho Links
             menusDAO.Delete(menus);
-            return RedirectToAction("Index");
+
+            //Thong bao thanh cong
+            TempData["message"] = new XMessage("success", "Xóa menu thành công");
+            //O lai trang thung rac
+            return RedirectToAction("Trash");
         }
     }
 }
